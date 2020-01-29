@@ -130,8 +130,6 @@ dmypy.json
 
 *.jpg
 
-imgs/
-
 \.DS_Store
 
 \.idea/

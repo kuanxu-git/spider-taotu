@@ -25,7 +25,8 @@ def down_imgs(img_url, sub_dir):
         f.write(r.content)
         print("Success      " + hash_str(img_url) + '.jpg')
 
-
+if not os.path.exists(IMG_DIR):
+    os.mkdir(IMG_DIR)
 db = sqlite3.connect("spider_tt8.db",check_same_thread=False)
 cur = db.cursor()
 cur.execute("select name, urls from xiuren")
@@ -39,8 +40,8 @@ for line in lines:
         if "http" in slim_url:
             try:
                 thread_name = "t" + str(random.randint(0, 9999))
-                thread_name = threading.Thread(target=down_imgs, args=(slim_url, track_name))
-                thread_name.start()
+                thread = threading.Thread(target=down_imgs, args=(slim_url, track_name), name=thread_name)
+                thread.start()
                 time.sleep(0.1)
             except:
                 pass

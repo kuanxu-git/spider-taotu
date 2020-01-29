@@ -5,7 +5,7 @@ import random
 import hashlib
 import requests
 import threading
-from lxml import etree
+from xml import etree
 
 td8_url = "https://www.192td.com"
 

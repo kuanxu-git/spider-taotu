@@ -32,3 +32,8 @@
 ###  4.下载过程展示
 
 ![1](https://raw.githubusercontent.com/LookCos/spider-taotu/master/imgs/GIF.gif)
+
+1
+2
+3
+
